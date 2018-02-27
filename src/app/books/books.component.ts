@@ -12,7 +12,7 @@ import { BooksFilterPipe } from '../pipes/books-filter.pipe';
 })
 export class BooksComponent implements OnInit {
 
-  constructor(private bookService: BookService, private preloaderService: PreloaderService, private searchService: SearchService) { }
+  constructor(private bookService: BookService, public preloaderService: PreloaderService, public searchService: SearchService) { }
 
   books: Book[];
 

@@ -34,7 +34,7 @@ export class BookTranslatorComponent implements OnInit {
     }
   }
 
-  private checkWordsCombination(): boolean {
+  checkWordsCombination(): boolean {
     return !(this.word && this.translation);
   }
 

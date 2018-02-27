@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class BookHeaderComponent implements OnInit {
   queryString: string;
 
-  constructor(private searchService: SearchService, private router: Router) {
+  constructor(private searchService: SearchService, public router: Router) {
     router.events.subscribe((val) => {
       this.queryString = '';
       this.searchService.setSearchValue(this.queryString);
