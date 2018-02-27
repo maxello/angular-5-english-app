@@ -1,0 +1,51 @@
+$panel-heading-color: #00AB83;
+$close-color: #d20101;
+$xs-width: 560px;
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+table, th, td {
+    border: 0;
+}
+th, td {
+    padding: 0;
+}
+tr.active>td {
+  background-color: lighten($panel-heading-color, 55%);
+}
+.table {
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $xs-width) {
+    margin-bottom: 30px;
+  }
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.mark-ico {
+  color: $panel-heading-color;
+  cursor: pointer;
+}
+.close-ico {
+  color: $close-color;
+  cursor: pointer;
+}

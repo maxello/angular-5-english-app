@@ -1,0 +1,9 @@
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="logo" routerLink="/books">English App</a>
+      <input *ngIf="this.router.routerState.snapshot.url === '/books'" type="text" [(ngModel)]="queryString" (keyup)="onChangeSearchField($event)" placeholder="Search..."/>
+    </div>
+  </div>
+  <app-preloader></app-preloader>
+</header>

@@ -1,0 +1,6 @@
+<div class="translator-holder">
+  <input type="text" [(ngModel)]="word" [disabled]="loading" />
+  <button type="button" [disabled]="!word || loading" (click)="getTranslation(word)" class="yandex-btn"><span class="yandex-icon"></span></button>
+  <input type="text" [(ngModel)]="translation" [disabled]="loading" />
+  <button type="button" [disabled]="checkWordsCombination() || loading" (click)="prepareWordsCombination()" class="btn">Add to list</button>
+</div>

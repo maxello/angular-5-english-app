@@ -1,0 +1,51 @@
+$color-main: #000;
+$panel-heading-color: #00AB83;
+$panel-heading-font-color: #fff;
+
+.book-item {
+  margin: 0 10px 20px;
+  border-radius: 7px;
+  background-color: #fff;
+  // width: 230px;
+  display: block;
+  text-decoration: none;
+  color: $color-main;
+}
+
+.panel {
+  background-color: $panel-heading-font-color;
+  .panel-heading {
+    background-color: $panel-heading-color;
+    color: $panel-heading-font-color;
+    padding: 15px;
+    font-size: 18px;
+    position: relative;
+
+    .book-title {
+      margin: 0;
+      font-size: 18px;
+      margin-right: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    // .close-ico {
+    //   display: inline-block;
+    //   // cursor: pointer;
+    // }
+  }
+  .panel-body {
+    padding: 15px;
+    .book-info-list {
+      font-size: 16px;
+      text-align: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.text-center {
+  text-align: center;
+}

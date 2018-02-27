@@ -1,0 +1,16 @@
+<div *ngIf="book" class="panel">
+  <div class="panel-heading">
+    <app-book-heading [title]="book.title" (titleUpdated)="handleTitleUpdated($event)"></app-book-heading>
+  </div>
+  <div class="panel-body">
+    <app-book-translator (addWordsCombination)="handleWordsCombinationAdded($event)" [lastId]="lastId"></app-book-translator>
+    <app-book-translations-list (wordChange)="handleWordChanged($event)" [list]="book.words"></app-book-translations-list>
+    <textarea rows="8" placeholder="Retelling &amp; comments" [(ngModel)]="book.comments"></textarea>
+  </div>
+  <div class="panel-footer">
+    <button type="button" class="btn orange-color" [disabled]="loading" (click)="goBack()">Go back</button>
+    <button type="button" class="btn" [disabled]="loading" (click)="saveBook()">Save</button>
+    <button type="button" class="btn" [disabled]="loading" (click)="saveBookAndExit()">Save and exit</button>
+    <button type="button" class="btn red-color" *ngIf="this.router.routerState.snapshot.url !== '/add'" [disabled]="loading" (click)="onDeleteBook()">Delete book</button>
+  </div>
+</div>

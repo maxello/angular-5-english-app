@@ -1,0 +1,25 @@
+$panel-heading-color: #00AB83;
+
+.heading-holder {
+  .title {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .title-ico {
+    font-size: 20px;
+    color: darken($panel-heading-color, 10%);
+    margin-bottom: 1px;
+    margin-left: 6px;
+  }
+}
+
+input[type="text"] {
+  height: 24px;
+  border: 0;
+  font-size: 16px;
+  outline: 0;
+  width: 280px;
+}

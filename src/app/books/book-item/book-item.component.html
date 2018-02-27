@@ -1,0 +1,15 @@
+<a class="book-item" routerLink="/detail/{{book.id}}">
+  <div class="panel">
+    <div class="panel-heading text-center">
+      <h4 class="book-title">{{book.title}}</h4>
+    </div>
+    <div class="panel-body">
+      <ul class="book-info-list">
+        <li>Amount: <span>{{book.words.length}}</span></li>
+        <li>Marked: <span>{{getMarked(book.words)}}</span></li>
+        <li>Comments: {{book.comments ? "+" : "-"}}</li>
+        <li>ID: {{book.id}}</li>
+      </ul>
+    </div>
+  </div>
+</a>

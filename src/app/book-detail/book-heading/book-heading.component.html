@@ -1,0 +1,4 @@
+<div *ngIf="!headingState" class="heading-holder">
+  <h1 class="title" (click)="changeHeadingView(true)">{{title}}<i class="far fa-edit title-ico"></i></h1>
+</div>
+<input *ngIf="headingState" #title (focus)="selectAllContent($event)" type="text" [(ngModel)]="headingTemp" (blur)="onBlurMethod()" (keyup)="onKey($event)" />

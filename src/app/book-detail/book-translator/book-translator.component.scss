@@ -1,0 +1,82 @@
+$panel-bg-color: #00AB83;
+$xs-width: 560px;
+
+.translator-holder {
+  text-align: center;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $xs-width) {
+    text-align: left;
+  }
+
+  .yandex-btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    vertical-align: top;
+    margin: 7px auto;
+    display: block;
+
+    @media screen and (min-width: $xs-width) {
+  		margin: 0 4px;
+      display: inline-block;
+  	}
+
+    .yandex-icon {
+        display: block;
+        background: url('../../../assets/yandex.png') no-repeat;
+        background-size: 90% 90%;
+        background-position: center;
+        height: 100%;
+    }
+  }
+
+  input {
+    text-align: left;
+    max-width: 300px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+
+    @media screen and (min-width: $xs-width) {
+  		width: auto;
+  	}
+
+    &[disabled]{
+      background-color: #ccc;
+    }
+  }
+
+  .btn {
+    height: 34px;
+    vertical-align: top;
+    background-color: $panel-bg-color;
+    color: #fff;
+    padding: 5px 16px;
+    font-size: 14px;
+    margin: 15px auto 5px;
+    border: 0;
+    display: block;
+    cursor: pointer;
+
+    @media screen and (min-width: $xs-width) {
+  		margin: 0 4px;
+      display: inline-block;
+  	}
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<ul class="books-list">
+  <li *ngFor="let book of books | BooksFilterPipe: searchService.getSearchValue()">
+    <app-book-item [book]="book" (deleteBook)="handleBookDeleted($event)"></app-book-item>
+  </li>
+</ul>
+<div *ngIf="!this.preloaderService.getPreloaderValue()" class="add-book">
+  <button type="button" class="add-book-btn" routerLink="/add"><i class="fas fa-plus"></i></button>
+</div>
