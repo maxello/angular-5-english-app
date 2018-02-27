@@ -7,9 +7,8 @@ import { BookDetailComponent }  from './book-detail/book-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/books', pathMatch: 'full' },
-  // { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: BookDetailComponent },
-  { path: 'books', component: BooksComponent, data: { urlSegment: "books" } },
+  { path: 'books', component: BooksComponent },
   { path: 'add', component: BookDetailComponent }
 ];
 
